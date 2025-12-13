@@ -1,3 +1,9 @@
 {
-  "IDX.agenticWorkspace": true
+  "IDX.agenticWorkspace": true,
+  "code-runner.executorMap": {
+    "csharp": "pkill -f 'dotnet run' || true; cd $dir && dotnet run $fileName"
+  },
+  "code-runner.runInTerminal": true, 
+  "code-runner.saveAllFilesBeforeRun": true,
+  "code-runner.clearPreviousOutput": true
 }
