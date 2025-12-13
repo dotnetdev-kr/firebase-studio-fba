@@ -6,7 +6,7 @@ This project is an example of an ASP.NET Core application that uses file-based r
 
 Click the button below to create a workspace from this template:
 
-[![Open in IDX](https://cdn.idx.dev/btn/open_light_32.svg)](https://idx.google.com/import?url=https://github.com/dotnetdev-kr/dotnet-app)
+[![Open in IDX](https://cdn.idx.dev/btn/open_light_32.svg)](https://idx.google.com/import?url=https://github.com/dotnetdev-kr/firebase-studio-fba)
 
 ## Getting Started
 
