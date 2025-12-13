@@ -18,6 +18,11 @@
     ];
   };
   idx = {
-    extensions = [ "echoapi.echoapi-for-vscode" "dotnetdev-kr-custom.csharp" "ms-dotnettools.vscode-dotnet-runtime" "formulahendry.code-runner"];
+    extensions = [
+      "echoapi.echoapi-for-vscode"
+      "dotnetdev-kr-custom.csharp"
+      "ms-dotnettools.vscode-dotnet-runtime"
+      "formulahendry.code-runner"
+    ];
   };
 }

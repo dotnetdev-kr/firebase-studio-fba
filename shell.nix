@@ -1,5 +1,5 @@
 # How to run:
-# docker run -it --rm -p 3000:3000 -v %cd%:/app -w /app nixos/nix nix-shell --run run-vscode-web
+# podman run -it --rm -p 3000:3000 --name vscodelocal -v %cd%:/app -w /app nixos/nix nix-shell --run run-vscode-web
 #
 # Open VS Code Server:
 # - 웹 브라우저에서 http://localhost:3000 으로 접속
@@ -20,13 +20,22 @@ let
       pkgs.lib.mapAttrsToList (key: val: "export ${key}=\"${val}\"") envAttrs
     );
 
-  # 4. run-vscode-web 스크립트 (openvscode-server 사용)
+  # 4. 확장 설치 명령 생성 헬퍼
+  extensions = devConfig.idx.extensions or [];
+  installExtensionsCmd = pkgs.lib.concatMapStringsSep "\n" (ext: 
+    ''${pkgs.openvscode-server}/bin/openvscode-server --install-extension ${ext} || echo "⚠️  Failed to install: ${ext}"''
+  ) extensions;
+
+  # 5. run-vscode-web 스크립트 (openvscode-server 사용)
   runVSCodeWeb = pkgs.writeShellScriptBin "run-vscode-web" ''
     echo ""
-    echo "🚀 Starting Open VS Code Server..."
-    echo "🌍 Open your browser at: http://localhost:3000"
+    echo "* Installing extensions..."
+    ${installExtensionsCmd}
     echo ""
-    ${pkgs.openvscode-server}/bin/openvscode-server --host 0.0.0.0 --port 3000 --without-connection-token
+    echo "* Starting Open VS Code Server..."
+    echo "* Open your browser at: http://localhost:3000"
+    echo ""
+    ${pkgs.openvscode-server}/bin/openvscode-server --host 0.0.0.0 --port 3000 --without-connection-token --accept-server-license-terms --start-server
   '';
 
 in pkgs.mkShell {
@@ -39,9 +48,9 @@ in pkgs.mkShell {
     ${envToExport (devConfig.env or {})}
 
     echo "========================================================="
-    echo " 🚀 Loaded environment from .idx/dev.nix"
-    echo " 💡 Type 'run-vscode-web' to start VS Code Web Server!"
-    echo " 🌍 Then open http://localhost:3000 in your browser"
+    echo " * Loaded environment from .idx/dev.nix"
+    echo " * Type 'run-vscode-web' to start VS Code Web Server!"
+    echo " * Then open http://localhost:3000 in your browser"
     echo "========================================================="
   '';
 }
