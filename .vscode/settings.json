@@ -5,7 +5,5 @@
   },
   "code-runner.runInTerminal": true, 
   "code-runner.saveAllFilesBeforeRun": true,
-  "code-runner.clearPreviousOutput": true,
-  "security.workspace.trust.enabled": false,
-  "security.workspace.trust.startupPrompt": "never"
+  "code-runner.clearPreviousOutput": true
 }
