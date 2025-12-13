@@ -1,7 +1,8 @@
 {
     "recommendations": [
         "dotnetdev-kr-custom.csharp",
-        "formulahendry.code-runner"
+        "formulahendry.code-runner",
+        "echoapi.echoapi-for-vscode"
     ],
     "unwantedRecommendations": [
         "muhammad-sammy.csharp"
