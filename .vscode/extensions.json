@@ -1,5 +1,8 @@
 {
     "recommendations": [
         "dotnetdev-kr-custom.csharp"
+    ],
+    "unwantedRecommendations": [
+        "muhammad-sammy.csharp"
     ]
 }
