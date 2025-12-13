@@ -18,6 +18,6 @@
     ];
   };
   idx = {
-    extensions = [ "rangav.vscode-thunder-client" "dotnetdev-kr-custom.csharp" "ms-dotnettools.vscode-dotnet-runtime"];
+    extensions = [ "rangav.vscode-thunder-client" "dotnetdev-kr-custom.csharp" "ms-dotnettools.vscode-dotnet-runtime" "formulahendry.code-runner"];
   };
 }
