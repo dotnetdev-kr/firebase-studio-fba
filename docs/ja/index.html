@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Firebase Studio 템플릿: .NET 10 파일 기반 앱</title>
-    <meta name="description" content=".NET 10의 새로운 파일 기반 애플리케이션 기능을 보여주는 간단한 ASP.NET Core 애플리케이션입니다. Firebase Studio (IDX) 개발에 최적화되어 있습니다.">
-    <meta name="keywords" content=".NET 10, ASP.NET Core, Firebase Studio, IDX, 파일 기반 앱, Minimal API, C#">
+    <title>Firebase Studio テンプレート: .NET 10 ファイルベースアプリ</title>
+    <meta name="description" content=".NET 10の新しいファイルベースアプリケーション機能を示すシンプルなASP.NET Coreアプリケーションです。Firebase Studio (IDX) 開発に最適化されています。">
+    <meta name="keywords" content=".NET 10, ASP.NET Core, Firebase Studio, IDX, ファイルベースアプリ, Minimal API, C#">
     <meta name="author" content="dotnetdev-kr">
     
     <!-- Open Graph / Social -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Firebase Studio 템플릿: .NET 10 파일 기반 앱">
-    <meta property="og:description" content="Firebase Studio를 위한 제로 세레모니 .NET 10 템플릿. Minimal API를 사용한 단일 파일 ASP.NET Core 앱.">
-    <meta property="og:url" content="https://dotnetdev-kr.github.io/firebase-studio-fba/ko/">
+    <meta property="og:title" content="Firebase Studio テンプレート: .NET 10 ファイルベースアプリ">
+    <meta property="og:description" content="Firebase Studio向けのゼロセレモニー .NET 10テンプレート。Minimal APIを使用したシングルファイルASP.NET Coreアプリ。">
+    <meta property="og:url" content="https://dotnetdev-kr.github.io/firebase-studio-fba/ja/">
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Firebase Studio 템플릿: .NET 10 파일 기반 앱">
-    <meta name="twitter:description" content="Firebase Studio를 위한 제로 세레모니 .NET 10 템플릿. Minimal API를 사용한 단일 파일 ASP.NET Core 앱.">
+    <meta name="twitter:title" content="Firebase Studio テンプレート: .NET 10 ファイルベースアプリ">
+    <meta name="twitter:description" content="Firebase Studio向けのゼロセレモニー .NET 10テンプレート。Minimal APIを使用したシングルファイルASP.NET Coreアプリ。">
     
     <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔥</text></svg>">
@@ -27,11 +27,11 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
     <style>
         body {
-            font-family: 'Noto Sans KR', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'Noto Sans JP', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
         }
     </style>
 </head>
@@ -41,26 +41,22 @@
         <nav class="nav">
             <div class="nav-brand">
                 <span class="nav-logo">🔥</span>
-                <span class="nav-title">.NET 10 FBA 템플릿 <span class="preview-badge">Preview</span></span>
+                <span class="nav-title">.NET 10 FBA テンプレート <span class="preview-badge">Preview</span></span>
             </div>
             <div class="nav-links">
-                <a href="#features">특징</a>
-                <a href="#quickstart">시작하기</a>
-                <a href="#code">코드</a>
+                <a href="#features">特徴</a>
+                <a href="#quickstart">クイックスタート</a>
+                <a href="#code">コード</a>
                 <a href="../" class="lang-switch" title="English">
                     <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg>
                     English
-                </a>
-                <a href="../ja/" class="lang-switch" title="日本語">
-                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg>
-                    日本語
                 </a>
                 <a href="https://github.com/dotnetdev-kr/firebase-studio-fba" class="btn btn-outline" target="_blank">
                     <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                     GitHub
                 </a>
             </div>
-            <button class="nav-toggle" aria-label="네비게이션 토글">
+            <button class="nav-toggle" aria-label="ナビゲーション切替">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -69,30 +65,30 @@
         
         <div class="hero-content">
             <div class="hero-badge">
-                <span class="badge badge-fire">🔥 Firebase Studio 지원</span>
+                <span class="badge badge-fire">🔥 Firebase Studio 対応</span>
                 <span class="badge badge-dotnet">🚀 .NET 10</span>
             </div>
             <h1 class="hero-title">
-                무료 C# 개발 환경<br>
-                <span class="gradient-text">클라우드에서 바로 시작</span>
+                無料のC#開発環境<br>
+                <span class="gradient-text">クラウドですぐに始める</span>
             </h1>
             <p class="hero-description">
-                혁신적인 .NET 10 파일 기반 애플리케이션 기능을 보여주는 경량 ASP.NET Core 템플릿입니다.
-                <code>.csproj</code> 파일이 필요 없습니다. 솔루션 파일도 없습니다. 순수한 C# 마법만 있습니다.
+                革新的な.NET 10ファイルベースアプリケーション機能を示す軽量ASP.NET Coreテンプレートです。
+                <code>.csproj</code>ファイル不要。ソリューションファイルも不要。純粋なC#マジックだけ。
             </p>
             <div class="hero-actions">
                 <a href="https://idx.google.com/import?url=https://github.com/dotnetdev-kr/firebase-studio-fba" class="btn btn-primary btn-lg" target="_blank">
                     <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/></svg>
-                    Firebase Studio에서 열기
+                    Firebase Studioで開く
                 </a>
                 <a href="https://github.com/dotnetdev-kr/firebase-studio-fba" class="btn btn-secondary btn-lg" target="_blank">
-                    GitHub에서 보기
+                    GitHubで見る
                 </a>
             </div>
             <div class="hero-stats">
                 <div class="stat">
                     <span class="stat-value">1</span>
-                    <span class="stat-label">파일</span>
+                    <span class="stat-label">ファイル</span>
                 </div>
                 <div class="stat">
                     <span class="stat-value">0</span>
@@ -100,7 +96,7 @@
                 </div>
                 <div class="stat">
                     <span class="stat-value">∞</span>
-                    <span class="stat-label">가능성</span>
+                    <span class="stat-label">可能性</span>
                 </div>
             </div>
         </div>
@@ -136,9 +132,9 @@ app.Run(url);</code></pre>
     <section class="section killer-features">
         <div class="container">
             <div class="section-header">
-                <span class="section-badge">✨ AI로 더 강력하게</span>
-                <h2 class="section-title">AI 퍼스트 개발 경험</h2>
-                <p class="section-description">이 템플릿은 AI 지원 개발을 위해 처음부터 설계되었습니다</p>
+                <span class="section-badge">✨ AIでさらに強力に</span>
+                <h2 class="section-title">AIファースト開発体験</h2>
+                <p class="section-description">このテンプレートはAI支援開発のために最初から設計されています</p>
             </div>
             
             <div class="killer-grid">
@@ -147,12 +143,12 @@ app.Run(url);</code></pre>
                         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
                     </div>
                     <div class="killer-content">
-                        <h3>Microsoft Learn MCP 서버</h3>
-                        <p>Gemini AI를 공식 Microsoft 문서에 직접 연결하는 <strong>Model Context Protocol (MCP)</strong> 서버가 통합되어 있습니다. 최신 Microsoft Learn 콘텐츠를 기반으로 정확하고 최신의 .NET 10 코드 제안을 받아보세요.</p>
+                        <h3>Microsoft Learn MCPサーバー</h3>
+                        <p>Gemini AIを公式Microsoftドキュメントに直接接続する<strong>Model Context Protocol (MCP)</strong>サーバーが統合されています。最新のMicrosoft Learnコンテンツに基づいた正確で最新の.NET 10コード提案を受けられます。</p>
                         <ul class="killer-list">
-                            <li>실시간 문서 검색</li>
-                            <li>항상 최신 .NET 기능 반영</li>
-                            <li>AI 환각(hallucination) 대폭 감소</li>
+                            <li>リアルタイムドキュメント検索</li>
+                            <li>常に最新の.NET機能を反映</li>
+                            <li>AIハルシネーションを大幅に削減</li>
                         </ul>
                     </div>
                 </div>
@@ -162,12 +158,12 @@ app.Run(url);</code></pre>
                         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
                     </div>
                     <div class="killer-content">
-                        <h3>FBA 최적화 AI 프롬프트</h3>
-                        <p>포함된 <code>GEMINI.md</code> 파일에는 Gemini AI가 .NET 10 파일 기반 애플리케이션에 최적화된 코드를 생성하도록 안내하는 세심하게 작성된 프롬프트가 포함되어 있습니다.</p>
+                        <h3>FBA最適化AIプロンプト</h3>
+                        <p>含まれている<code>GEMINI.md</code>ファイルには、Gemini AIが.NET 10ファイルベースアプリケーションに最適化されたコードを生成するよう導く、丁寧に作成されたプロンプトが含まれています。</p>
                         <ul class="killer-list">
-                            <li>.csproj 생성 없이 단일 파일 유지</li>
-                            <li>기본적으로 최상위 문(top-level statements) 사용</li>
-                            <li>Minimal API 패턴 내장</li>
+                            <li>.csproj生成なしでシングルファイル維持</li>
+                            <li>デフォルトでトップレベルステートメント使用</li>
+                            <li>Minimal APIパターン内蔵</li>
                         </ul>
                     </div>
                 </div>
@@ -179,45 +175,45 @@ app.Run(url);</code></pre>
     <section id="features" class="section features">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">왜 이 템플릿을 선택해야 할까요?</h2>
-                <p class="section-description">파일 기반 애플리케이션으로 .NET 개발의 미래를 경험하세요</p>
+                <h2 class="section-title">なぜこのテンプレートを選ぶべきか？</h2>
+                <p class="section-description">ファイルベースアプリケーションで.NET開発の未来を体験しましょう</p>
             </div>
             
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">📄</div>
-                    <h3>단일 파일 애플리케이션</h3>
-                    <p><code>.csproj</code> 파일이 필요 없습니다. SDK와 MSBuild 속성은 특수 지시문을 사용하여 인라인으로 정의됩니다.</p>
+                    <h3>シングルファイルアプリケーション</h3>
+                    <p><code>.csproj</code>ファイル不要。SDKとMSBuildプロパティは特殊ディレクティブを使用してインラインで定義されます。</p>
                 </div>
                 
                 <div class="feature-card">
                     <div class="feature-icon">⚡</div>
                     <h3>Minimal APIs</h3>
-                    <p>최소한의 상용구 코드로 빠른 HTTP API를 구축하세요. 마이크로서비스, 프로토타입 및 학습에 완벽합니다.</p>
+                    <p>最小限のボイラープレートで高速なHTTP APIを構築。マイクロサービス、プロトタイプ、学習に最適です。</p>
                 </div>
                 
                 <div class="feature-card">
                     <div class="feature-icon">🔥</div>
-                    <h3>Firebase Studio 지원</h3>
-                    <p>Google의 Firebase Studio (IDX) 클라우드 개발 환경에서 원활하게 실행되도록 사전 구성되어 있습니다.</p>
+                    <h3>Firebase Studio対応</h3>
+                    <p>GoogleのFirebase Studio (IDX)クラウド開発環境でシームレスに動作するよう事前設定されています。</p>
                 </div>
                 
                 <div class="feature-card">
                     <div class="feature-icon">🚀</div>
                     <h3>.NET 10</h3>
-                    <p>최첨단 기능과 성능 개선이 포함된 최신 .NET 10으로 구축되었습니다.</p>
+                    <p>最先端の機能とパフォーマンス改善を備えた最新の.NET 10で構築されています。</p>
                 </div>
                 
                 <div class="feature-card">
                     <div class="feature-icon">🤖</div>
-                    <h3>AI 기반 개발</h3>
-                    <p>Microsoft Learn MCP 서버 + 최적화된 <code>GEMINI.md</code> 프롬프트로 Gemini가 정확한 FBA 스타일 .NET 10 코드를 생성합니다.</p>
+                    <h3>AI駆動開発</h3>
+                    <p>Microsoft Learn MCPサーバー + 最適化された<code>GEMINI.md</code>プロンプトで、Geminiが正確なFBAスタイル.NET 10コードを生成します。</p>
                 </div>
                 
                 <div class="feature-card">
                     <div class="feature-icon">⚙️</div>
-                    <h3>환경 변수</h3>
-                    <p><code>PORT</code> 및 <code>TARGET</code> 환경 변수를 통해 쉽게 구성할 수 있습니다.</p>
+                    <h3>環境変数</h3>
+                    <p><code>PORT</code>および<code>TARGET</code>環境変数で簡単に設定できます。</p>
                 </div>
             </div>
         </div>
@@ -227,18 +223,18 @@ app.Run(url);</code></pre>
     <section id="quickstart" class="section quickstart">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">빠른 시작</h2>
-                <p class="section-description">몇 초 만에 시작하세요</p>
+                <h2 class="section-title">クイックスタート</h2>
+                <p class="section-description">数秒で始められます</p>
             </div>
             
             <div class="steps">
                 <div class="step">
                     <div class="step-number">1</div>
                     <div class="step-content">
-                        <h3>Firebase Studio에서 열기</h3>
-                        <p>아래 버튼을 클릭하여 이 템플릿에서 즉시 워크스페이스를 만드세요:</p>
+                        <h3>Firebase Studioで開く</h3>
+                        <p>下のボタンをクリックして、このテンプレートからワークスペースを即座に作成します：</p>
                         <a href="https://idx.google.com/import?url=https://github.com/dotnetdev-kr/firebase-studio-fba" target="_blank" class="idx-button">
-                            <img src="https://cdn.idx.dev/btn/open_light_32.svg" alt="IDX에서 열기">
+                            <img src="https://cdn.idx.dev/btn/open_light_32.svg" alt="IDXで開く">
                         </a>
                     </div>
                 </div>
@@ -246,11 +242,11 @@ app.Run(url);</code></pre>
                 <div class="step">
                     <div class="step-number">2</div>
                     <div class="step-content">
-                        <h3>권장 확장 설치</h3>
-                        <p>권장 확장을 설치하라는 메시지가 표시되면 <strong>"Yes"</strong>를 클릭하여 모든 확장을 설치하세요. 여기에는 C# Dev Kit 및 .NET 개발에 필수적인 기타 도구가 포함됩니다.</p>
+                        <h3>推奨拡張機能をインストール</h3>
+                        <p>推奨拡張機能のインストールを求められたら、<strong>「Yes」</strong>をクリックしてすべての拡張機能をインストールしてください。C# Dev Kitと.NET開発に必要なその他のツールが含まれています。</p>
                         <div class="tip-box">
                             <span class="tip-icon">💡</span>
-                            <span class="tip-text">팁: 모든 권장 확장을 설치하면 IntelliSense, 디버깅 및 AI 지원을 통한 최상의 개발 경험을 보장합니다.</span>
+                            <span class="tip-text">ヒント：すべての推奨拡張機能をインストールすると、IntelliSense、デバッグ、AI支援による最高の開発体験が保証されます。</span>
                         </div>
                     </div>
                 </div>
@@ -258,19 +254,19 @@ app.Run(url);</code></pre>
                 <div class="step">
                     <div class="step-number">3</div>
                     <div class="step-content">
-                        <h3>환경 설정 대기</h3>
-                        <p>Firebase Studio가 .NET 10 개발 환경을 자동으로 설정합니다. 준비가 완료되면 서버가 자동으로 시작됩니다.</p>
+                        <h3>環境セットアップを待つ</h3>
+                        <p>Firebase Studioが.NET 10開発環境を自動的にセットアップします。準備ができたらサーバーが自動的に起動します。</p>
                     </div>
                 </div>
                 
                 <div class="step">
                     <div class="step-number">4</div>
                     <div class="step-content">
-                        <h3>애플리케이션 실행</h3>
-                        <p>서버는 자동으로 시작됩니다. Code Runner를 사용하여 수동으로 실행할 수도 있습니다:</p>
+                        <h3>アプリケーションを実行</h3>
+                        <p>サーバーは自動的に起動します。Code Runnerを使用して手動で実行することもできます：</p>
                         <div class="tip-box">
                             <span class="tip-icon">▶️</span>
-                            <span class="tip-text">에디터 오른쪽 상단의 <strong>Run Code</strong> 버튼(▶)을 클릭하거나, <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>N</kbd>을 눌러 애플리케이션을 실행하세요.</span>
+                            <span class="tip-text">エディタ右上の<strong>Run Code</strong>ボタン(▶)をクリックするか、<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>N</kbd>を押してアプリケーションを実行してください。</span>
                         </div>
                     </div>
                 </div>
@@ -278,8 +274,8 @@ app.Run(url);</code></pre>
                 <div class="step">
                     <div class="step-number">5</div>
                     <div class="step-content">
-                        <h3>개발 시작!</h3>
-                        <p>앱이 포트 <code>3000</code>에서 실행됩니다. 미리보기를 열고 코딩을 시작하세요!</p>
+                        <h3>開発開始！</h3>
+                        <p>アプリはポート<code>3000</code>で実行されます。プレビューを開いてコーディングを始めましょう！</p>
                     </div>
                 </div>
             </div>
@@ -290,8 +286,8 @@ app.Run(url);</code></pre>
     <section id="code" class="section code-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">작동 원리</h2>
-                <p class="section-description">.NET 10의 파일 기반 애플리케이션 마법 이해하기</p>
+                <h2 class="section-title">仕組み</h2>
+                <p class="section-description">.NET 10のファイルベースアプリケーションの魔法を理解する</p>
             </div>
             
             <div class="code-explanation">
@@ -300,8 +296,8 @@ app.Run(url);</code></pre>
                         <code>#!/usr/bin/env dotnet</code>
                     </div>
                     <div class="explanation-text">
-                        <h4>Shebang 지시문</h4>
-                        <p>Unix 계열 시스템에서 C# 파일을 스크립트로 직접 실행할 수 있게 합니다.</p>
+                        <h4>Shebangディレクティブ</h4>
+                        <p>Unix系システムでC#ファイルをスクリプトとして直接実行できるようにします。</p>
                     </div>
                 </div>
                 
@@ -310,8 +306,8 @@ app.Run(url);</code></pre>
                         <code>#:sdk Microsoft.NET.Sdk.Web</code>
                     </div>
                     <div class="explanation-text">
-                        <h4>SDK 지시문</h4>
-                        <p>사용할 SDK를 지정하여 프로젝트 파일 없이 웹 애플리케이션 기능을 활성화합니다.</p>
+                        <h4>SDKディレクティブ</h4>
+                        <p>使用するSDKを指定し、プロジェクトファイルなしでWebアプリケーション機能を有効にします。</p>
                     </div>
                 </div>
                 
@@ -320,8 +316,8 @@ app.Run(url);</code></pre>
                         <code>#:property PublishAot=false</code>
                     </div>
                     <div class="explanation-text">
-                        <h4>속성 지시문</h4>
-                        <p>MSBuild 속성을 인라인으로 설정합니다. 코드 파일을 벗어나지 않고 빌드를 구성하세요.</p>
+                        <h4>プロパティディレクティブ</h4>
+                        <p>MSBuildプロパティをインラインで設定します。コードファイルを離れることなくビルドを構成できます。</p>
                     </div>
                 </div>
             </div>
@@ -332,45 +328,45 @@ app.Run(url);</code></pre>
     <section class="section structure">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">프로젝트 구조</h2>
-                <p class="section-description">설계부터 깔끔하고 미니멀하게</p>
+                <h2 class="section-title">プロジェクト構造</h2>
+                <p class="section-description">設計からクリーンでミニマル</p>
             </div>
             
             <div class="structure-tree">
                 <div class="tree-item">
                     <span class="tree-icon">📄</span>
                     <span class="tree-name">Program.cs</span>
-                    <span class="tree-desc">내장 SDK 구성이 포함된 메인 애플리케이션 파일</span>
+                    <span class="tree-desc">埋め込みSDK設定を含むメインアプリケーションファイル</span>
                 </div>
                 <div class="tree-item">
                     <span class="tree-icon">📁</span>
                     <span class="tree-name">.idx/</span>
-                    <span class="tree-desc">Firebase Studio (IDX) 구성</span>
+                    <span class="tree-desc">Firebase Studio (IDX) 設定</span>
                 </div>
                 <div class="tree-item indent">
                     <span class="tree-icon">📄</span>
                     <span class="tree-name">dev.nix</span>
-                    <span class="tree-desc">Nix 기반 개발 환경</span>
+                    <span class="tree-desc">Nixベース開発環境</span>
                 </div>
                 <div class="tree-item indent">
                     <span class="tree-icon">📄</span>
                     <span class="tree-name">mcp.json</span>
-                    <span class="tree-desc">MCP 서버 구성</span>
+                    <span class="tree-desc">MCPサーバー設定</span>
                 </div>
                 <div class="tree-item">
                     <span class="tree-icon">📁</span>
                     <span class="tree-name">.vscode/</span>
-                    <span class="tree-desc">VS Code 설정 및 확장</span>
+                    <span class="tree-desc">VS Code設定と拡張機能</span>
                 </div>
                 <div class="tree-item">
                     <span class="tree-icon">📄</span>
                     <span class="tree-name">GEMINI.md</span>
-                    <span class="tree-desc">Gemini AI 컨텍스트 파일</span>
+                    <span class="tree-desc">Gemini AIコンテキストファイル</span>
                 </div>
                 <div class="tree-item">
                     <span class="tree-icon">📄</span>
                     <span class="tree-name">README.md</span>
-                    <span class="tree-desc">프로젝트 문서</span>
+                    <span class="tree-desc">プロジェクトドキュメント</span>
                 </div>
             </div>
         </div>
@@ -380,18 +376,18 @@ app.Run(url);</code></pre>
     <section class="section cta">
         <div class="container">
             <div class="cta-content">
-                <h2>시작할 준비가 되셨나요?</h2>
-                <p>Firebase Studio에서 .NET 10 파일 기반 애플리케이션의 간편함을 경험하세요</p>
+                <h2>始める準備はできましたか？</h2>
+                <p>Firebase Studioで.NET 10ファイルベースアプリケーションのシンプルさを体験しましょう</p>
                 <div class="cta-actions">
                     <a href="https://idx.google.com/import?url=https://github.com/dotnetdev-kr/firebase-studio-fba" class="btn btn-primary btn-lg" target="_blank">
-                        🔥 Firebase Studio에서 열기
+                        🔥 Firebase Studioで開く
                     </a>
                     <a href="https://github.com/dotnetdev-kr/firebase-studio-fba" class="btn btn-outline btn-lg" target="_blank">
-                        ⭐ GitHub에서 스타 주기
+                        ⭐ GitHubでスターを付ける
                     </a>
                 </div>
                 <div class="feedback-note">
-                    <p>💬 문제가 발생했거나 제안 사항이 있으신가요? <a href="https://github.com/dotnetdev-kr/firebase-studio-fba/issues" target="_blank">GitHub Issue</a>로 의견을 남겨주세요!</p>
+                    <p>💬 問題が発生したり、提案がありますか？ <a href="https://github.com/dotnetdev-kr/firebase-studio-fba/issues" target="_blank">GitHub Issue</a>でご意見をお聞かせください！</p>
                 </div>
             </div>
         </div>
@@ -403,15 +399,15 @@ app.Run(url);</code></pre>
             <div class="footer-content">
                 <div class="footer-brand">
                     <span class="nav-logo">🔥</span>
-                    <span>.NET 10 FBA 템플릿 <span class="preview-badge">Preview</span></span>
+                    <span>.NET 10 FBA テンプレート <span class="preview-badge">Preview</span></span>
                 </div>
                 <div class="footer-links">
                     <a href="https://github.com/dotnetdev-kr/firebase-studio-fba" target="_blank">GitHub</a>
-                    <a href="https://forum.dotnetdev.kr/" target="_blank">닷넷데브</a>
-                    <a href="https://learn.microsoft.com/ko-kr/dotnet/" target="_blank">Microsoft Learn</a>
+                    <a href="https://forum.dotnetdev.kr/" target="_blank">dotnetdev-kr</a>
+                    <a href="https://learn.microsoft.com/ja-jp/dotnet/" target="_blank">Microsoft Learn</a>
                 </div>
                 <p class="footer-copyright">
-                    Made with ❤️ by <a href="https://forum.dotnetdev.kr/" target="_blank">닷넷데브</a>
+                    Made with ❤️ by <a href="https://forum.dotnetdev.kr/" target="_blank">dotnetdev-kr</a>
                 </p>
             </div>
         </div>

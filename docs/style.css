@@ -930,6 +930,33 @@ img {
     justify-content: center;
 }
 
+.feedback-note {
+    margin-top: 40px;
+    padding: 20px 28px;
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    display: inline-block;
+}
+
+.feedback-note p {
+    font-size: 0.95rem;
+    color: var(--color-text-secondary);
+    margin: 0;
+}
+
+.feedback-note a {
+    color: var(--color-primary);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: var(--transition-fast);
+}
+
+.feedback-note a:hover {
+    color: var(--color-primary-light);
+}
+
 /* Footer */
 .footer {
     padding: 48px 0;
