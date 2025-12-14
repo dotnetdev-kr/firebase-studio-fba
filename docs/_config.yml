@@ -1,0 +1,22 @@
+# GitHub Pages Configuration
+# See: https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll
+
+# Site settings
+title: Firebase Studio Template - .NET 10 File-based App
+description: A simple ASP.NET Core application demonstrating the new .NET 10 file-based application feature. Zero ceremony, single-file approach perfect for Firebase Studio (IDX).
+baseurl: "/firebase-studio-fba"
+url: "https://dotnetdev-kr.github.io"
+
+# Build settings
+theme: null
+plugins: []
+
+# Exclude files from build
+exclude:
+  - README.md
+  - GEMINI.md
+  - Program.cs
+  - .idx/
+  - .vscode/
+  - .gitignore
+  - "*.cs"
