@@ -27,5 +27,27 @@
       "ms-dotnettools.vscode-dotnet-runtime"
       "formulahendry.code-runner"
     ];
+    workspace = {
+      onCreate = {
+        # Remove docs folder (GitHub Pages) - not needed for development
+        remove-docs = "rm -rf docs";
+      };
+      onStart = {
+        # Start the development server
+        run-server = "dotnet run Program.cs &";
+      };
+    };
+    previews = {
+      enable = true;
+      previews = {
+        web = {
+          command = ["dotnet" "run" "Program.cs"];
+          manager = "web";
+          env = {
+            PORT = "$PORT";
+          };
+        };
+      };
+    };
   };
 }
